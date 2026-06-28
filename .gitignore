@@ -1,0 +1,68 @@
+# ─── Internal docs (do NOT push to public repo) ───
+CLAUDE.md
+ARCHITECTURE.md
+.claude/
+
+# ─── Secrets ───────────────────────────────
+.env
+.env.*
+# .env.example 是唯一允許進 git 的 env 檔(合約)
+!.env.example
+.envrc
+*.pem
+*.key
+*.p12
+
+# ─── Rust ─────────────────────────────────
+target/
+**/*.rs.bk
+# .sqlx/ 本 demo commit 進 repo(SQL 已隨 migrations/src 公開;Docker/CI offline build 需要)
+# production / 教室專案才 ignore — 見 CLAUDE.md、ARCHITECTURE.md §0.5
+*.db
+*.sqlite
+*.sqlite-journal
+
+# ─── Frontend(本 repo 暫無,但模板先擺好)─────
+node_modules/
+dist/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# ─── Docker / Compose ─────────────────────
+# 本機覆寫常含 admin token / 路徑
+docker-compose.override.yml
+.docker/
+
+# ─── IDE / OS ─────────────────────────────
+# VS Code 個人設定可能含路徑 / token / debug env
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# ─── Logs / Tmp ───────────────────────────
+*.log
+logs/
+tmp/
+*.bak
+*.swp
+
+
+# Added by cargo
+
+/target
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Private AI/local temporary files
+.claude/tmp/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/settings.json
