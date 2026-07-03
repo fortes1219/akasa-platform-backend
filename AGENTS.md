@@ -7,11 +7,8 @@
 ## 進入專案後先讀
 
 1. AGENTS.md
-2. CLAUDE.md
-3. .claude/rules/
-4. .claude/docs/*HANDOFF*.md
-5. docs/platform-architecture/decision-board.md
-6. 與任務相關的 architecture、contract、code 與目前 Git diff
+2. 若本機有 private local context，依 Fortes 指示讀取
+3. 讀與任務相關的 contract、code 與目前 Git diff
 
 文件互相衝突時，停止並請 Fortes 拍板。
 
@@ -30,6 +27,7 @@
 
 - tracked file、commit message 與 Git history 一律視為外部可讀。
 - Secret、主機 IP、正式部署細節、部署目錄、內部 runbook、公司專案路徑與私有 handoff 不得進 public Git。
+- Private architecture decisions, local handoffs, internal planning notes, and implementation strategy must stay outside public Git.
 - .env.example 只能放 placeholder；.env 真值必須 ignore。
 - Secret 曾進 history 時立即 rotate；rewrite history 不能取代 rotation。
 

@@ -24,11 +24,7 @@ Akasa Platform Backend 是 Rust 寫的萬用前後台 / commerce capability plat
 - 不在第一階段實作 R2 upload。
 - 不把 meetup demo 的 kline / Binance / trading-pairs domain 搬進來。
 
-## Architecture Entry
+## Public Boundary
 
-請先讀：
-
-- docs/platform-architecture/decision-board.md
-- docs/platform-architecture/decision-board-review-notes.md
-- docs/platform-architecture/reusable-tech-inventory.md
-- .claude/docs/SESSION_HANDOFF_NEXT.md
+- Detailed architecture decisions and local handoffs are intentionally kept outside public Git.
+- This repository only exposes the public-safe backend skeleton and minimal guardrails.
