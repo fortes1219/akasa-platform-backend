@@ -66,3 +66,6 @@ tmp/
 .DS_Store
 Thumbs.db
 .vscode/settings.json
+
+# Private architecture decision docs
+docs/architecture/
